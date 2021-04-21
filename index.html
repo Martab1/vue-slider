@@ -16,25 +16,31 @@
     
     <div id="app">
         
+        <h1>{{ title }}</h1>
+
         <div class="slider">
 
-            <div class="prev">
+            <div class="prev" @click="prevPhoto" >
                 <i class="fas fa-arrow-left"></i>
             </div>
     
             <div class="images">
-                <img src="https://picsum.photos/700" alt="">
+                <img :src="photos[indexPhoto]" :alt="photos">
             </div>
     
-            <div class="next">
+            <div class="next" @click="nextPhoto">
                 <i class="fas fa-arrow-right"></i>
             </div>
 
             <div class="nav">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i 
+                v-for="(photo,index) in photos"
+                 class="fas fa-circle"
+                 :class="{ active: index == indexPhoto}"
+                 @click="setPhotoWithDot(index)"
+
+                ></i>
+                
             </div>
         </div>
      
