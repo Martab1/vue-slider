@@ -53,11 +53,11 @@ h1{
 }
 
 .prev{
-    left: 26%;
+    left: 25%;
 }
 
 .next{
-    right: 26%;
+    right: 25%;
 }
 
 .prev:hover,
@@ -81,10 +81,6 @@ h1{
     cursor: pointer;
 }
 
-.nav i:hover{
-    color:#fff;
-}
-
 .active{
-    color:aqua
+    color:aqua;
 }

@@ -12,6 +12,10 @@ const app = new Vue({
         "https://www.kudatouroperator.it/wp-content/uploads/2016/04/MALDIVE-RELAX-Fotolia_115472889_Subscription_XXL-1024x683.jpg",
         ],
         indexPhoto: 0,
+        intervalID: 0,  // settare qui perchè scope funzioni non globale
+    },
+    created(){
+        this.startLoop();
     },
     methods:{
        nextPhoto(){
@@ -35,7 +39,16 @@ const app = new Vue({
        },
        setPhotoWithDot(index){
            console.log(index);
-           index == this.indexPhoto;
+           this.indexPhoto = index;
+       },
+       startLoop(){
+            this.intervalID = setInterval(()=> {
+             this.nextPhoto();
+
+           } , 3000)
+       },
+       stopLoop(){
+        clearInterval(this.intervalID);
        }
 
     }
