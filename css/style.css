@@ -10,7 +10,7 @@
 
 .slider{
     position: relative;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -25,7 +25,7 @@
 .prev,
 .next{
     font-size: 20px;
-    background-color: rgba(116, 116, 116, 0.5);
+    background: rgba(0,0,0, .6);
     color:#fff;
     width: 40px;
     height: 40px;
@@ -50,4 +50,28 @@
 .prev:hover,
 .next:hover{
     background: rgb(68, 64, 64);
+}
+
+
+/* NAV */
+
+.nav{
+    position: absolute;
+    bottom: 30px;
+    background: rgba(0,0,0, .6);
+    color: rgb(175, 173, 173);
+    padding: 20px;
+    border-radius: 15px;
+}
+.nav i {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.nav i:hover{
+    color:#fff;
+}
+
+.active{
+    color:aqua;
 }
