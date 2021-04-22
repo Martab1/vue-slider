@@ -14,7 +14,7 @@ const app = new Vue({
         indexPhoto: 0,
         intervalID: 0,  // settare qui perchè scope funzioni non globale
     },
-    created(){
+    mounted(){
         this.startLoop();
     },
     methods:{
@@ -46,9 +46,14 @@ const app = new Vue({
              this.nextPhoto();
 
            } , 3000)
+           this.$refs.slider.blur();
        },
        stopLoop(){
         clearInterval(this.intervalID);
+
+        // focus slider
+        this.$refs.slider.focus();
+
        }
 
     }

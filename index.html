@@ -28,6 +28,10 @@
             <div class="images"
                  @mouseenter="stopLoop"
                  @mouseleave="startLoop"
+                 @keyup.arrow-left="prevPhoto"
+                 @keyup.arrow-right="nextPhoto"
+                 tabindex= "0"
+                 ref= "slider"
             >
                 <img :src="photos[indexPhoto]" :alt="photos">
             </div>
