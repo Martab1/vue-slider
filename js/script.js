@@ -26,9 +26,8 @@ const app = new Vue({
                this.indexPhoto = 0;
                
            }
-           
-       },
 
+        },
        prevPhoto(){
         this.indexPhoto -= 1;
 
